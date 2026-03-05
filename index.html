@@ -1,1691 +1,951 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="utf-8"/>
-<meta content="GPT Plus 官方代充平台，提供稳定安全的GPT-5升级服务，正规iOS通道，封号包赔。" name="description"/>
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-<title>GPT4.pro - GPT Plus 官方代充平台 | 2025最新升级通道 🛡️</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT Plus 会员代充平台</title>
+  <style>
     :root {
-      --primary: #14b8a6;      /* 旗舰青（Teal） */
-      --primary-dark: #0f766e; /* 深青强调 */
-      --accent: #2dd4bf;       /* 亮青点缀 */
-      --gray-300: #cbd5e1;
-      --gray-500: #64748b;
-      --radius: 22px;
-
-      /* Brand Colors (Teal/Cyan Theme) */
-      --brand-500:#14b8a6; /* 主色 */
-      --brand-600:#0d9488; /* hover/强调 */
-      --brand-glass: rgba(20, 184, 166, 0.18); /* 玻璃条/轻底 */
-      --brand-outline: rgba(45, 212, 191, 0.45);
-      --brand-outline-strong: rgba(45, 212, 191, 0.65);
-      --brand-shadow-soft: rgba(20, 184, 166, 0.18);
-      --brand-shadow-strong: rgba(20, 184, 166, 0.35);
-      --brand-tint: rgba(45, 212, 191, 0.12);
-      --brand-tint-strong: rgba(45, 212, 191, 0.22);
-
-      /* Neutral */
-      --overlay:#0B1220;                    /* 深夜蓝弹窗/底栏背景 */
-      --surface-glass: rgba(255,255,255,.10);/* 玻璃描边 */
-      --white-85: rgba(255,255,255,.85);     /* 玻璃白填充 */
-      --text-strong:#ffffff;                 /* 浅色文字 */
-      --text-muted: rgba(255,255,255,.78);
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: rgba(99, 102, 241, 0.1);
+      --accent: #f97316;
+      --gray-100: #f4f4f5;
+      --gray-200: #e4e4e7;
+      --gray-300: #d4d4d8;
+      --gray-400: #a1a1aa;
+      --gray-500: #71717a;
+      --gray-600: #52525b;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 16px rgba(99, 102, 241, 0.08);
+      --shadow-lg: 0 12px 24px rgba(99, 102, 241, 0.12);
+      --space-xs: 12px;
+      --space-sm: 16px;
+      --space-md: 24px;
+      --space-lg: 32px;
+      --space-xl: 48px;
     }
 
-    /* 背景渐变 & 全局排版 */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       background:
-        /* 大散景光斑 */
-        radial-gradient(260px 180px at 18% 22%, rgba(20,184,166,.12), transparent 70%),
-        radial-gradient(220px 160px at 68% 16%, rgba(45,212,191,.08), transparent 72%),
-        radial-gradient(180px 140px at 82% 42%, rgba(255,255,255,.05), transparent 75%),
-        /* 深青蓝底色 */
-        linear-gradient(135deg, #042f2e 0%, #0f172a 45%, #020617 100%);
+        radial-gradient(circle at 0% 0%, var(--primary-light) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, var(--primary-light) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(99, 102, 241, 0.06) 100%);
+      color: var(--gray-600);
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-sm);
+    }
+
+    header {
+      text-align: center;
+      padding: var(--space-md) 0;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: var(--space-xs);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gray-600);
+      text-align: center;
+      margin: var(--space-md) 0 var(--space-md);
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(99, 102, 241, 0.08);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(99, 102, 241, 0.16);
+    }
+
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      -webkit-text-size-adjust: 100%;
-      -webkit-tap-highlight-color: transparent;
+      margin-bottom: var(--space-sm);
     }
 
-    /* 中心卡片 */
-    .card {
-      width: 100%;
-      max-width: 620px;
-      background:
-        linear-gradient(180deg, rgba(20,184,166,.12) 0%, rgba(45,212,191,.05) 100%),
-        rgba(15, 23, 42, 0.85);
-      border-radius: var(--radius);
-      box-shadow: 0 6px 36px rgba(0, 0, 0, 0.20);
-      backdrop-filter: blur(16px) saturate(130%);
-      -webkit-backdrop-filter: blur(16px) saturate(130%);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.35);
-      position: relative;
-    }
-  /* 金属渐变描边 */
-  .card::before{
-    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
-    border: 1px solid rgba(255,255,255,.45);
-  }
-  .card::after{
-    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
-    padding:1px; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor; mask-composite: exclude;
-    background: linear-gradient(135deg, rgba(45,212,191,.9), rgba(20,184,166,.75), rgba(13,148,136,.85));
-  }
-
-    /* 卡片 – 顶部彩条、标题、徽章 */
-    .card-header {
-      padding: 48px 40px 32px;
-      text-align: center;
-    }
-    .card-header h1 {  margin-bottom:6px;
-      font-size: 1.8rem;
-      margin: 0 0 8px;
-      font-weight: 700;
-    }
-    .brand-badge{
-      display:flex; align-items:center; justify-content:center; gap:12px;
-      margin: 2px auto 12px;
-      padding: 0;
-      border-radius: 0;
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      width: fit-content;
-    }
-    .brand-icon{ width: 32px; height: 32px; display:block; }
-    .brand-name{ font-weight:900; color:#fff; letter-spacing:.02em; font-size:1.05rem; }
-    .brand-sub{ font-size:.85rem; color:#ccfbf1; opacity:.85; margin-left:6px; }
-    /* Hero 组合 */
-    .hero{ display:flex; flex-direction:column; align-items:center; gap:8px; }
-    .hero h1{ margin: 2px 0 0; }
-    .hero-divider{ width:min(440px,88%); height:1px; background: rgba(255,255,255,.12); margin: 2px 0 0; border-radius:1px; }
-    .hero .notice-bar-top{ margin: 4px 0 0; font-size:.85rem; color:#ccfbf1; }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-      .badge {
-    padding: 4px 8px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    background: var(--white-85);
-    color:#0f172a;
-    border: 1px solid var(--surface-glass);
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    box-shadow: none;
-    width: 95px;
-    justify-content: center;
-    white-space: nowrap;
-  }
-
-    /* 指标区域 */
-    .stats {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin: 36px 0 12px;
-    }
-    .stat {
-      flex: 1 1 140px;
-      text-align: center;
-    }
-    .stat-value {
-      font-size:1rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      color: var(--gray-300);
+    .icon-circle svg {
+      width: 20px;
+      height: 20px;
+      color: white;
     }
 
-    /* CTA 按钮 */
-    .btn {
-      display: block;
-      width: 100%;
-      margin-top: 26px;
-      padding: 16px 0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-      background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-500) 100%);
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.25s, box-shadow .25s, transform .15s;
-    }
-    .btn:hover {
-      filter: brightness(1.06);
-      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.35);
-      transform: translateY(-1px);
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin: var(--space-xs) 0;
     }
 
-    /* 页脚 */
-    footer {
-      text-align: center;
-      font-size: 0.7rem;
-      color: var(--gray-300);
-      padding: 18px 0 24px;
-    }
-
-    /* 小屏优化 */
-    @media (max-width: 480px) {
-      .card-header { padding: 40px 24px 24px; }
-      
-      .price { margin-top: 8px; gap: 6px; }
-      .price-val { font-size: 2.2rem; }
-      .price-tag { font-size: 0.75rem; padding: 3px 8px; }
-      
-      .button-group { flex-direction: column; gap: 8px; margin: 20px 0 8px; }
-      .button-group .btn-buy,
-      .button-group .btn-recharge { margin: 0; padding: 16px 0; font-size: 1.05rem; }
-      
-      .steps-mini { gap: 6px 8px; margin: 8px 0 6px; }
-      .step-pill { font-size: 0.75rem; padding: 5px 8px; }
-      .steps-link { font-size: 0.75rem; margin-left: 4px; }
-      
-      .badges { gap: 8px; margin-top: 16px; }
-      .badge { font-size: 0.7rem; padding: 3px 8px; }
-      
-      .stats { gap: 16px; margin: 24px 0 8px; }
-      .stat-value { font-size: 0.9rem; }
-      .stat-label { font-size: 0.7rem; }
-    }
-  
-  /* ======== 价格 + CTA ======== */
-  .price{ margin-top:4px; display:flex; justify-content:center; align-items:flex-end; gap:8px; 
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    gap:8px;
-    margin-top:6px;
-  }
-  .price-val{
-    font-size:2.4rem;
-    font-weight:900;
-    line-height:1;
-  }
-  .price-tag{
-    font-size:.8rem;
-    font-weight:600;
-    padding:4px 10px;
-    border-radius:9999px;
-    background: rgba(233,196,106,.16);
-    color:#fff;
-    border: 1px solid var(--surface-glass);
-  }
-
-  .btn-buy{
-    width:100%;
-    margin:22px 0 6px;
-    padding:18px 0;
-    font-size:1.12rem;
-    font-weight:800;
-    letter-spacing:.02em;
-    color:#fff;
-    background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%); /* 青色渐变 */
-    border:none;
-    border-radius:14px;
-    cursor:pointer;
-    transition: transform .15s ease, filter .2s ease;
-    box-shadow:0 6px 14px var(--brand-shadow-soft);
-    animation: none;
-  }
-  .btn-buy:hover{ filter: brightness(1.05); transform: translateY(-1px); }
-  .btn-buy:active{ transform: translateY(0); }
-  .btn-buy:focus-visible{ outline: 3px solid var(--brand-500); outline-offset: 2px; }
-
-  /* 按钮组布局 */
-  .button-group{
-    display: flex;
-    gap: 12px;
-    margin: 22px 0 8px;
-  }
-  .button-group .btn-buy{
-    flex: 1.2;
-    margin: 0;
-  }
-  .button-group .btn-recharge{
-    flex: 1;
-    margin: 0;
-  }
-
-  /* 购买说明文字 */
-  .buy-note{
-    margin: 8px 0 4px;
-    text-align: center;
-    font-size: .85rem;
-    color: rgba(255,255,255,.85);
-    opacity: .9;
-  }
-
-  /* 进入充值系统按钮 */
-  .btn-recharge{
-    width:100%;
-    margin: 16px 0 6px;
-    padding: 14px 0;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing:.02em;
-    color: #fff;
-    background: linear-gradient(135deg, rgba(255,255,255,.15) 0%, rgba(255,255,255,.08) 100%);
-    border: 1px solid rgba(255,255,255,.25);
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all .2s ease;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  .btn-recharge:hover{ 
-    background: linear-gradient(135deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.12) 100%);
-    border-color: rgba(255,255,255,.35);
-    transform: translateY(-1px);
-  }
-  .btn-recharge:active{ transform: translateY(0); }
-  .btn-recharge:focus-visible{ outline: 2px solid rgba(255,255,255,.5); outline-offset: 2px; }
-
-  /* —— 说明文字 —— */
-  .note-weak{
-    margin:10px 0 4px;
-    text-align:center;
-    font-size:.82rem;
-    color:#ccfbf1;
-    opacity:.95;
-  }
-  .note-link{
-    color:#99f6e4;
-    text-decoration:underline;
-  }
-  
-
-  .cs-drawer{
-    position:fixed; right:22px; bottom:92px;
-    width:260px; background:#fff; color:#111;
-    border-radius:14px; box-shadow:0 12px 36px rgba(0,0,0,.22);
-    transform:translateY(20px); opacity:0; pointer-events:none;
-    transition:all .2s ease;
-  }
-  .cs-drawer.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
-  .cs-head{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:12px 14px; border-bottom:1px solid #eee;
-  }
-  .cs-head button{ background:transparent; border:none; font-size:16px; cursor:pointer; }
-  .cs-body{ padding:12px 14px 16px; font-size:.92rem; }
-  .cs-body p{ margin:10px 0; }
-  .copy{
-    margin-left:8px; padding:4px 8px; font-size:.78rem;
-    border-radius:8px; border:1px solid var(--brand-outline); background: var(--brand-tint); color:#0f172a; cursor:pointer;
-  }
-  .qq-toggle-btn{
-    width:100%; margin-top:8px; padding:6px 8px; font-size:.8rem;
-    border:1px solid var(--brand-outline); background: var(--brand-tint); border-radius:6px;
-    cursor:pointer; color:#0f172a; transition:background .2s;
-  }
-  .qq-toggle-btn:hover{ background: var(--brand-tint-strong); }
-  .qq-content{ margin-top:8px; }
-  .qr{ display:block; width:100%; border-radius:10px; margin-top:8px; }
-  
-
-  /* ===== CTA 强化 ===== */
-  @keyframes ctaPulse { 0%{opacity:1} 100%{opacity:1} }
-
-  /* ===== 移动端浮窗 CTA ===== */
-  .cta-sticky{
-    position:fixed; left:16px; right:16px; bottom:16px; z-index:50;
-    display:none;
-    text-align:center; font-weight:800; font-size:1.02rem; color:#fff;
-    padding:14px 0; border-radius:14px; text-decoration:none;
-    background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%);
-    box-shadow:0 6px 14px var(--brand-shadow-soft);
-  }
-  @media (max-width: 640px){ .cta-sticky{ display:none; } }
-  .steps-mini{
-    display:flex; flex-wrap:wrap; gap:8px 10px; justify-content:center;
-    align-items:center; margin:8px 0 4px;
-  }
-  .step-pill{
-    font-size:.78rem; font-weight:600; color:#1f2937;
-    padding:6px 10px; border-radius:9999px;
-    background: var(--white-85); border:1px solid var(--surface-glass);
-    box-shadow: none;
-    width: 95px; text-align: center;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .steps-link{
-    margin-left:6px; font-size:.78rem; color:#aef3ff; text-decoration:underline;
-    text-underline-offset:2px;
-  }
-
-  .flow-mask{
-    position:fixed; inset:0; background:rgba(0,0,0,.35);
-    backdrop-filter: blur(2px);
-    display:none; align-items:center; justify-content:center; z-index:60;
-  }
-  .flow-mask.show{ display:flex; }
-  .flow-modal{
-    width:min(92vw,560px); background:#fff; color:#111; border-radius:16px;
-    box-shadow:0 24px 64px rgba(0,0,0,.25); overflow:hidden;
-  }
-  .flow-head{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:12px 16px; border-bottom:1px solid #eee;
-  }
-  .flow-head button{ background:transparent; border:none; font-size:18px; cursor:pointer; }
-  .flow-body{ padding:14px 18px 18px; }
-  .flow-body ol{ margin:0 0 6px 18px; }
-  .flow-body li{ margin:8px 0; line-height:1.6; }
-  .tips{ margin-top:6px; font-size:.9rem; color:#6b7280; }
-  .tips.highlight{ 
-    background: var(--brand-glass);
-    color: var(--text-strong);
-    padding: 12px 16px;
-    border-radius: 10px;
-    border: 1px solid var(--surface-glass);
-    font-weight: 600;
-    text-align: center;
-    margin: 16px 0;
-    box-shadow: none;
-  }
-  /* —— 优化对齐：文字左对齐，椭圆按钮对齐 —— */
-  .buy-notes {
-    list-style: none;
-    padding: 0;
-    margin: 12px auto;
-    max-width: 360px;
-    display: block;
-    text-align: left;
-  }
-  .buy-notes li {
-    display: flex;
-    align-items: center;
-    margin: 6px 0;
-    font-size: 0.9rem;
-    color: #d6f7ff;
-    opacity: 0.9;
-    position: relative;
-    padding-left: 1.25rem;
-  }
-  .buy-notes li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius: 50%;
-    background: #fff;
-  }
-  .buy-notes li.highlight {
-    background: var(--brand-glass);
-    color: var(--text-strong);
-    padding: 12px 16px;
-    border-radius: 10px;
-    border: 1px solid var(--surface-glass);
-    font-weight: 600;
-    margin: 16px 0;
-    box-shadow: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .buy-notes li.highlight:hover {
-    transform: translateY(-1px);
-    box-shadow: none;
-  }
-  .buy-notes li.highlight::before {
-    content: '💬';
-    color: var(--brand-500);
-  }
-  /* —— flow-modal 客服入口样式 —— */
-  .flow-support { margin-top:16px; padding-top:12px; border-top:1px solid #e5e7eb; }
-  .flow-support .support-title {
-    font-size:0.92rem; font-weight:600; color:#111827; margin-bottom:6px;
-  }
-  .flow-support p {
-    margin:4px 0; font-size:0.88rem; color:#374151;
-  }
-  .flow-support .copy-btn {
-    margin-left:8px; padding:2px 6px; font-size:0.78rem;
-    border:1px solid rgba(20,184,166,.45); background: rgba(20,184,166,.12); color:#fff; border-radius:6px;
-    cursor:pointer; transition:background .2s;
-  }
-  .flow-support .copy-btn:hover { background: rgba(20,184,166,.22); }
-  .flow-qq-toggle-btn{
-    width:100%; margin-top:8px; padding:6px 8px; font-size:.8rem;
-    border:1px solid rgba(20,184,166,.45); background: rgba(20,184,166,.12); border-radius:6px;
-    cursor:pointer; color:#fff; transition:background .2s;
-  }
-  .flow-qq-toggle-btn:hover{ background: rgba(20,184,166,.22); }
-  .flow-qq-content{ margin-top:8px; }
-  /* 成本暴涨通知样式 */
-  .cost-notice {
-    background: var(--brand-glass);
-    border: 2px solid var(--surface-glass);
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin: 20px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    box-shadow: none;
-    animation: costNoticePulse 3s ease-in-out infinite;
-  }
-  @keyframes costNoticePulse {
-    0%, 100% { 
-      box-shadow: none;
-      transform: scale(1);
-    }
-    50% { 
-      box-shadow: none;
-      transform: scale(1.01);
-    }
-  }
-  .cost-notice-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .cost-notice-content {
-    color: var(--text-strong);
-    flex: 1;
-  }
-  .cost-notice-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #ccfbf1;
-  }
-  .cost-notice-main {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .cost-notice-item {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .cost-notice-label {
-    font-weight: 600;
-    color: var(--text-strong);
-    flex-shrink: 0;
-    min-width: 80px;
-  }
-  .cost-notice-item strong {
-    color: #dc2626;
-    font-weight: 700;
-  }
-  .copy-inline {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--text-strong);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-left: 8px;
-    flex-shrink: 0;
-  }
-  .copy-inline:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-
-  /* 手机端 */
-  @media (max-width: 640px) {
-    .cost-notice {
-      padding: 12px 16px;
-      margin: 12px 0;
-      gap: 8px;
-      flex-direction: column;
-      text-align: center;
-    }
-    .cost-notice-icon {
-      font-size: 1.5rem;
-      margin: 0 auto 6px;
-    }
-    .cost-notice-content {
-      width: 100%;
-    }
-    .cost-notice-title {
+    .card p {
       font-size: 0.95rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+      padding: var(--space-md);
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(99, 102, 241, 0.08);
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .step-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .step-arrow {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin: 0 var(--space-xs);
+    }
+
+    .btn-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: var(--space-md) auto;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .btn {
+      padding: 10px var(--space-md);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s ease;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--gray-600);
+      border: 1px solid var(--gray-200);
+    }
+
+    .btn-secondary:hover {
+      background: var(--gray-50);
+      border-color: var(--gray-300);
+      color: var(--primary);
+    }
+
+    .btn-text {
+      background: transparent;
+      color: var(--primary);
+      padding: 8px var(--space-sm);
+      border: none;
+    }
+
+    .btn-text:hover {
+      background: var(--primary-light);
+    }
+
+    .price-card {
+      background: #fefefe;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin: var(--space-xl) auto;
+      border: 1px solid rgba(99, 102, 241, 0.12);
+    }
+
+    .price-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 16px 32px rgba(99, 102, 241, 0.16);
+    }
+
+    .price-card h2 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .price-tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin: var(--space-md) 0;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .price-original {
+      color: var(--gray-400);
+      text-decoration: line-through;
+      font-size: 1.1rem;
+    }
+
+    .badge {
+      background: var(--accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      text-align: center;
+      margin: var(--space-sm) 0;
+    }
+
+    .disclaimer {
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.75rem;
+      margin: var(--space-xl) 0;
+    }
+
+    .wechat-float {
+      position: fixed;
+      bottom: var(--space-md);
+      right: var(--space-md);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    .wechat-float:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: var(--space-xs);
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .steps {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+      .step-arrow {
+        transform: rotate(90deg);
+      }
+      .btn-group {
+        grid-template-columns: 1fr;
+        width: auto;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        margin: 0 auto;
+      }
+      .price-card {
+        margin: var(--space-lg) var(--space-sm);
+        padding: var(--space-lg);
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-sm) !important;
+      }
+      .comparison-card {
+        padding: var(--space-sm) !important;
+      }
+      .comparison-title {
+        font-size: 1.6rem !important;
+      }
+      :root {
+        --radius-lg: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Modal styles */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.95);
+      background: white;
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      z-index: 1001;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+      max-width: 90%;
+      width: auto;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid rgba(99, 102, 241, 0.12);
+    }
+
+    .modal-container.active {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gray-100);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-600);
+      transition: all 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--gray-200);
+      color: var(--gray-700);
+    }
+
+    .qr-container {
+      text-align: center;
+      padding: var(--space-md) var(--space-lg);
+    }
+
+    .qr-container img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-lg);
+      margin: var(--space-md) 0;
+    }
+
+    .qr-title {
+      font-size: 1.25rem;
+      color: var(--gray-700);
+      margin-bottom: var(--space-xs);
+      font-weight: 600;
+    }
+
+    .qr-subtitle {
+      font-size: 1rem;
+      color: var(--gray-500);
+      margin-bottom: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .modal-container {
+        width: 90%;
+        padding: var(--space-md);
+      }
+      .qr-container {
+        padding: var(--space-sm);
+      }
+      .qr-container img {
+        max-width: 240px;
+      }
+    }
+
+    .account-section {
+      margin: var(--space-md) 0;
+      text-align: center;
+    }
+
+    .account-section .hint {
+      font-size: 0.875rem;
+      color: var(--gray-600);
       margin-bottom: 8px;
       text-align: center;
     }
-    .cost-notice-main {
-      gap: 6px;
-    }
-    .cost-notice-item {
-      font-size: 0.85rem;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 6px;
-      text-align: left;
-      padding: 3px 0;
-    }
-    .cost-notice-label {
-      min-width: 70px;
-      font-size: 0.8rem;
-      flex-shrink: 0;
-    }
-    .copy-inline {
-      margin-left: 4px;
-      padding: 2px 4px;
-      font-size: 0.65rem;
-    }
-  }
-  
-  /* 超小屏幕优化 */
-  @media (max-width: 375px) {
-    .cost-notice {
-      padding: 10px 14px;
-      margin: 10px 0;
-    }
-    .cost-notice-title {
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-    .cost-notice-item {
-      font-size: 0.8rem;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 5px;
-      padding: 2px 0;
-    }
-    .cost-notice-label {
-      min-width: 65px;
+
+    .account-section .note {
       font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-top: 6px;
+      text-align: center;
     }
-    .copy-inline {
-      margin-left: 3px;
-      padding: 1px 3px;
-      font-size: 0.6rem;
-    }
-  }
-
-  .notice-bar-top{
-  margin: 6px auto 2px;
-  display:flex; align-items:center; justify-content:center;
-  max-width:520px;
-  padding:0; border-radius:0;
-  background: transparent;
-  color:#ccfbf1; font-weight:700; border: 0;
-  box-shadow: none;
-  font-size:.92rem;
-}
-.small-risk{
-  margin:8px 0 2px; text-align:center; color:rgba(255,255,255,.9);
-  font-size:.9rem;
-}
-
-/* 底部公告条 + 弹窗（保持与现有风格兼容） */
-.sticky-note{
-  position:fixed; left:0; right:0; bottom:0; z-index:30;
-  display:flex; align-items:center; justify-content:center; gap:.8rem; flex-wrap:wrap;
-  padding:.7rem 1rem; background:rgba(255,255,255,.92);
-  border-top:1px solid rgba(0,0,0,.06); backdrop-filter:saturate(140%) blur(4px);
-  font-size:14px; color:#111;
-}
-  .sticky-note .cta-mini{
-  all:unset; cursor:pointer; font-weight:800; padding:.45rem .8rem; border-radius:10px;
-  background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%);
-  color:#fff; border:1px solid var(--brand-outline);
-}
-  .sticky-note .cta-outline{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-  border:1px solid var(--brand-outline); color:#ccfbf1; background: var(--brand-tint);
-}
-.modal-mask{ position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; z-index:50; padding:16px; }
-.modal-mask.show{ display:flex; }
-.modal-card{ width:min(680px,96vw); background: linear-gradient(180deg, rgba(10,36,48,.92), rgba(9,30,40,.92)); color:#e6f7fb; border-radius:16px; padding:20px 20px 16px;
-  border:1px solid var(--brand-outline); box-shadow:0 20px 60px rgba(0,0,0,.35); backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%); position:relative; }
-.modal-card::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; padding:1px; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; background: linear-gradient(135deg, rgba(45,212,191,.85), rgba(20,184,166,.75), rgba(13,148,136,.75)); }
-.modal-card h3{ margin:.2rem 0 1rem; font-size:20px }
-.modal-card p{ line-height:1.7; margin:.4rem 0 1rem }
-.modal-footer{ display:flex; justify-content:flex-end; }
-.modal-close{ position:absolute; transform:translate(650px,-10px); background:#111827; color:#fff; border:none; padding:.35rem .55rem; border-radius:8px; cursor:pointer; }
-
-/* 细公告条（保持简洁） */
-.notice-bar-top{
-  margin: 6px auto 2px; display:flex; align-items:center; justify-content:center;
-  max-width:520px; padding:0; border-radius:0;
-  background: transparent;
-  color: #ccfbf1; font-weight:700; border: 0;
-  box-shadow: none; font-size:.92rem;
-}
-.small-risk{ margin:8px 0 2px; text-align:center; color:rgba(255,255,255,.9); font-size:.9rem; }
-/* 底部公告条（全宽） */
-.sticky-note{
-  position:fixed; left:0; right:0; bottom:0; z-index:30;
-  display:flex; align-items:center; justify-content:center; gap:.8rem; flex-wrap:wrap;
-  padding:.7rem 1rem; background:rgba(255,255,255,.92);
-  border-top:1px solid rgba(0,0,0,.06); backdrop-filter:saturate(140%) blur(4px);
-  font-size:14px; color:#111;
-}
-.sticky-note .cta-mini{
-  all:unset; cursor:pointer; font-weight:800; padding:.45rem .8rem; border-radius:10px;
-  background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%);
-  border:1px solid var(--brand-outline); color:#fff;
-}
-.sticky-note .cta-outline{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-  border:1px solid var(--brand-outline); color:#ccfbf1; background: var(--brand-tint);
-}
-/* 帮助中心 Modal */
-.help-mask{ position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; z-index:80; padding:16px; }
-.help-mask.show{ display:flex; }
-.help-card{
-  width:min(760px,96vw); max-height:min(88vh, 1200px); overflow:auto;
-  background: linear-gradient(180deg, rgba(10,36,48,.92), rgba(9,30,40,.92)); color:#e6f7fb; border-radius:16px; padding:16px 16px 12px;
-  border:1px solid var(--brand-outline); box-shadow:0 20px 60px rgba(0,0,0,.35); backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%); position:relative;
-}
-.help-card::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; padding:1px; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; background: linear-gradient(135deg, rgba(45,212,191,.85), rgba(20,184,166,.75), rgba(13,148,136,.75)); }
-.help-close{ position:sticky; top:0; float:right; background:#111827; color:#fff; border:none; padding:.35rem .55rem; border-radius:8px; cursor:pointer; }
-.help-tabs{ display:flex; gap:.5rem; margin:.25rem 0 .75rem; }
-  .help-tabs .tab{
-  all:unset; cursor:pointer; padding:.48rem .8rem; border-radius:10px; font-weight:700;
-  color:#e5e7eb; border:1px solid rgba(20,184,166,.45); background: rgba(20,184,166,.12);
-}
-  .help-tabs .tab.active{ background: rgba(20,184,166,.24); border-color: rgba(20,184,166,.65); }
-.help-panels .panel{ display:none; }
-.help-panels .panel.active{ display:block; }
-.flow-steps{ padding-left:1.2rem; line-height:1.8; }
-.list{ padding-left:1.2rem; line-height:1.8; }
-.muted{ opacity:.8; }
-.visually-hidden{ position:absolute; width:1px; height:1px; margin:-1px; border:0; padding:0; clip:rect(0 0 0 0); overflow:hidden; }
-/* mobile: bottom sheet style */
-@media (max-width: 520px){
-  .help-card{ width:100%; max-width:100%; border-bottom-left-radius:0; border-bottom-right-radius:0; align-self:flex-end; }
-}
-/* 打开弹窗时禁止滚动 */
-.modal-open{ overflow:hidden; }
-
-
-/* 统一“价格·涨价说明”弹窗：隐藏旧入口（全部并入统一弹窗） */
-/* 弹窗打开时，底部公告条降噪并禁点（小屏避免误触） */
-body.modal-open .sticky-note{ opacity:.6; pointer-events:none; }
-/* 打开弹窗时禁止页面滚动 */
-body.modal-open{ overflow:hidden; }
-
-/* 底部公告条（全宽居中） */
-.sticky-note{
-  position:fixed; left:0; right:0; bottom:0; z-index:30;
-  display:flex; align-items:center; justify-content:center; gap:.8rem; flex-wrap:wrap;
-  padding:.7rem 1rem; background:rgba(11,18,32,.90);
-  border-top:1px solid var(--surface-glass); backdrop-filter:saturate(140%) blur(4px);
-  font-size:14px; color:#fff;
-}
-.sticky-note .cta-mini{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-  background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%);
-  border:1px solid var(--brand-outline-strong); color:#fff;
-}
-.sticky-note .cta-outline{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-  border:1px solid var(--brand-outline); color:#fff; background: var(--brand-tint);
-}
-
-/* 价格·涨价说明 弹窗 */
-.modal-mask{ position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; z-index:70; padding:16px; }
-.modal-mask.show{ display:flex; }
-.modal-card{ width:min(720px,96vw); background: var(--overlay); color: var(--text-muted); border-radius:16px; padding:20px 20px 16px;
-  border:1px solid var(--surface-glass); box-shadow:0 20px 60px rgba(0,0,0,.4); outline:0; }
-.modal-close{ position:absolute; transform:translate(670px,-10px); background:#111827; color:#fff; border:none; padding:.35rem .55rem; border-radius:8px; cursor:pointer; }
-.help-tabs{ display:flex; gap:.5rem; margin:.5rem 0 1rem; flex-wrap:wrap; }
-.help-tabs .tab-btn{
-  all:unset; cursor:pointer; padding:.35rem .7rem; border-radius:10px; font-weight:700; color:#ccfbf1;
-  border:1px solid var(--brand-outline); background:var(--brand-tint);
-}
-.help-tabs .tab-btn.active{ color:#fff; background: var(--brand-tint-strong); border-color: var(--brand-outline-strong); }
-.tab-panel[hidden]{ display:none !important; }
-.tab-panel.active{ display:block; }
-.flow-steps{ padding-left:1.2rem; margin:.2rem 0 1rem }
-.hint{ opacity:.8; }
-
-/* 弹窗内按钮容器：增加间距 */
-.modal-footer{
-  display:flex; gap:1rem; align-items:center; flex-wrap:wrap;
-}
-
-/* 弹窗内按钮：统一描边 */
-.modal-footer .cta-mini{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-  border:1px solid rgba(255,255,255,.65); color:#fff;
-}
-/* 弹窗内购买按钮：与主 CTA 一致 */
-  .modal-footer .cta-outline{
-  all:unset; cursor:pointer; font-weight:700; padding:.42rem .75rem; border-radius:10px;
-    background: linear-gradient(180deg, var(--brand-600) 0%, var(--brand-500) 100%);
-    color:#fff;
-}
-
-@media (max-width:480px){ .modal-close{ transform:translate(300px,-10px);} }
-
-/* 小链接颜色 */
-a#openWhyTop{ color:#aef3ff; text-decoration:underline; }
-a#openWhyTop:hover{ color:#fff; }
-
-/* === Recharge Guide (rg-) minimal styles === */
-.rg-mask{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:999;padding:16px;}
-.rg-mask.show{display:flex;}
-.rg-card{width:min(560px,96vw);background:linear-gradient(180deg, rgba(10,36,48,.92), rgba(9,30,40,.92));color:#e6f7fb;border:1px solid var(--brand-outline);box-shadow:0 20px 60px rgba(0,0,0,.35);outline:0; backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%); position:relative;}
-.rg-card::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; padding:1px; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; background: linear-gradient(135deg, rgba(45,212,191,.85), rgba(20,184,166,.75), rgba(13,148,136,.75)); }
-.rg-title{margin:.2rem 0 1rem;font-size:1.1rem;font-weight:800;}
-.rg-close{position:absolute;transform:translate(500px,-10px);background:#111827;color:#fff;border:none;padding:.35rem .55rem;border-radius:8px;cursor:pointer;}
-.rg-body p{margin:.4rem 0;}
-.rg-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:.9rem 0 .4rem;}
-.rg-btn{all:unset;cursor:pointer;padding:.55rem .9rem;border-radius:10px;font-weight:800;}
-.rg-btn-primary{background:linear-gradient(180deg,var(--brand-600),var(--brand-500));color:#fff;}
-.rg-btn-ghost{border:1px solid rgba(255,255,255,.65);color:#fff;}
-.rg-copyline{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;background:rgba(255,255,255,.06);padding:.5rem .6rem;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
-.rg-url{user-select:all;word-break:break-all}
-.rg-hint{opacity:.8;font-size:.9rem}
-@media (max-width:480px){ .rg-close{ transform:translate(260px,-10px);} }
-
-/* === 充值系统选择弹窗 (rs-) === */
-.rs-mask{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:999;padding:16px;}
-.rs-mask.show{display:flex;}
-.rs-card{width:min(520px,96vw);background:linear-gradient(180deg, rgba(10,36,48,.92), rgba(9,30,40,.92));color:#e6f7fb;border:1px solid var(--brand-outline);box-shadow:0 20px 60px rgba(0,0,0,.35);outline:0; backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%); position:relative;}
-.rs-card::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; padding:1px; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; background: linear-gradient(135deg, rgba(45,212,191,.85), rgba(20,184,166,.75), rgba(13,148,136,.75)); }
-.rs-title{margin:.2rem 0 1rem;font-size:1.1rem;font-weight:800;text-align:center;}
-.rs-close{position:absolute;transform:translate(470px,-10px);background:#111827;color:#fff;border:none;padding:.35rem .55rem;border-radius:8px;cursor:pointer;}
-.rs-body p{margin:.4rem 0;text-align:center;}
-    .rs-options{display:flex;flex-direction:column;gap:16px;margin:20px 0;max-width:400px;margin-left:auto;margin-right:auto;}
-    .rs-option{padding:20px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;cursor:pointer;transition:all .2s ease;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);}
-.rs-option:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);transform:translateY(-2px);}
-    .rs-option-title{font-weight:800;margin-bottom:8px;color:#fff;font-size:1.05rem;}
-    .rs-option-desc{font-size:.9rem;opacity:.85;margin-bottom:10px;color:#d1f4ff;}
-    .rs-option-url{font-size:.85rem;color:var(--brand-500);word-break:break-all;font-weight:600;}
-.rs-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:.9rem 0 .4rem;justify-content:center;}
-.rs-btn{all:unset;cursor:pointer;padding:.55rem .9rem;border-radius:10px;font-weight:800;}
-.rs-btn-primary{background:linear-gradient(180deg,var(--brand-600),var(--brand-500));color:#fff;}
-.rs-btn-ghost{border:1px solid rgba(255,255,255,.65);color:#fff;}
-@media (max-width:640px){ 
-  .rs-options{ max-width:100%; gap:12px; }
-  .rs-option{ padding:16px 12px; }
-}
-@media (max-width:480px){ 
-  .rs-close{ transform:translate(260px,-10px);} 
-  .rs-option{ padding:12px 8px; }
-}
-
-/* === 官方通知弹窗（proof-） === */
-.proof-mask{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:120;padding:16px;}
-.proof-mask.show{display:flex;}
-.proof-card{width:min(860px,96vw);max-height:90vh;overflow:auto;background:#0b1220;color:rgba(255,255,255,.88);
-  border-radius:16px;padding:20px 20px 18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.45);outline:0;}
-.proof-close{position:sticky;top:-8px;float:right;background:#111827;color:#fff;border:none;padding:.38rem .6rem;border-radius:8px;cursor:pointer;}
-.proof-title{margin:.2rem 0 1rem;font-size:1.15rem;font-weight:800;}
-.proof-sec{margin:.75rem 0;}
-.proof-sec h4{margin:.25rem 0 .4rem;font-size:1.02rem;}
-.proof-list{margin:.35rem 0 .2rem;padding-left:1rem;}
-.proof-list li{margin:.3rem 0;}
-.proof-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:1rem 0 .2rem;}
-.proof-btn{all:unset;cursor:pointer;padding:.55rem .9rem;border-radius:10px;font-weight:800;}
-.proof-btn-ghost{border:1px solid rgba(255,255,255,.65);color:#fff;}
-.proof-btn-primary{background:linear-gradient(180deg,var(--brand-600) 0%,var(--brand-500) 100%);color:#fff;}
-.proof-hint{opacity:.82;}
-.proof-imgwrap{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:130;display:none;background:rgba(0,0,0,.9);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,.2);}
-.proof-imgwrap.show{display:block;}
-.proof-img{max-width:90vw;max-height:80vh;width:auto;height:auto;border-radius:8px;position:relative;}
-.proof-imgwrap .img-close{position:absolute;top:-10px;right:-10px;background:#ff4444;color:#fff;border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px;font-weight:bold;display:none;z-index:131;}
-@media (max-width:640px){
-  .proof-imgwrap{padding:15px;border-radius:8px;}
-  .proof-imgwrap .img-close{display:block;}
-  .proof-img{max-width:95vw;max-height:85vh;}
-}
-.proof-openlink{opacity:.9;text-decoration:underline;cursor:pointer;margin-left:.5rem;}
-/* 价格构成页签内的小链接样式（弱化） */
-#tab-price .open-proof-link{opacity:.85;text-decoration:underline;cursor:pointer;margin-left:.6rem;}
-@media (max-width:480px){ .proof-close{position:static;float:none;margin-left:auto;display:block;margin-bottom:.2rem;} }
-
-</style>
+  </style>
 </head>
 <body>
-<main class="card">
-<header class="card-header">
-<div class="hero">
-<div class="brand-badge" aria-label="光年升级计划 官方充值平台">
-  <svg class="brand-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-    <defs>
-      <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0" stop-color="#2dd4bf"/>
-        <stop offset="1" stop-color="#14b8a6"/>
-      </linearGradient>
-    </defs>
-    <path d="M30 8 L40 8 L40 18" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M40 8 L25 23" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M14 10 L14 36" stroke="#ccfbf1" stroke-width="4" stroke-linecap="round"/>
-    <path d="M8 22 L26 22" stroke="#ccfbf1" stroke-width="4" stroke-linecap="round"/>
-    <path d="M10 36 C16 30, 22 28, 28 28" stroke="#ccfbf1" stroke-width="4" stroke-linecap="round"/>
-  </svg>
-  <div>
-    <span class="brand-name">光年升级计划</span>
-    <span class="brand-sub">· 官方充值平台</span>
+  <div id="announcement"
+    style="background: #fff4e5; color: #663c00; text-align: center; padding: 12px 16px; position: relative; font-size: 0.9rem; font-weight: 500; border-bottom: 1px solid #fbbf24;">
+    <span>📢 如需帮助，请添加客服微信：RuoYan0814</span>
+    <button id="closeAnnouncement"
+      style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #663c00; cursor: pointer; font-size: 1.2rem; font-weight: bold; padding: 0; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background-color 0.2s ease;"
+      onmouseover="this.style.backgroundColor='rgba(102, 60, 0, 0.1)'"
+      onmouseout="this.style.backgroundColor='transparent'">×</button>
   </div>
-</div>
-<h1>GPT Plus 安全充值 🛡️</h1>
-<div class="notice-bar-top">📢 当前价 ¥129 ｜ 官方通道更稳</div>
-<div class="hero-divider"></div>
-</div>
 
-<div class="price">
-<span class="price-val">¥129</span>
-<span class="price-tag">首充·标准版</span>
-</div>
-<div class="button-group">
-  <button aria-label="立即购买卡密" class="btn-buy" id="buyBtn">🛒 立即购买 (¥129)</button>
-  <button class="btn-recharge" id="rechargeBtn">💳 进入自动充值系统</button>
-</div>
-<a href="#" id="openWhyTop">为什么不是更便宜</a>
-<p class="small-risk">⚠ 警惕低价黑卡，避免封号风险</p>
-<div class="steps-mini">
-<span class="step-pill">1 下单卡密</span>
-<span class="step-pill">2 进入网站充值</span>
-<span class="step-pill">3 自动到帐</span>
-<a class="steps-link" href="#" id="openFlow">查看流程</a>
-</div>
-<ul class="buy-notes">
-<li>官方 iOS 通道·微信直充·5分钟自动到帐</li>
-<li>无需提供账号密码，支持新老账号</li>
-<li>可开票，需要开票请先联系人工，勿直接购买</li>
-</ul>
-<div class="badges">
-<span class="badge">📱 官方 iOS 通道</span>
-<span class="badge">🛡️ 无需提供密码</span>
-<span class="badge">🔒 降低封号风险</span>
-</div>
-<div class="stats">
-<div class="stat">
-<div class="stat-value">50,000+</div>
-<div class="stat-label">服务用户</div>
-</div>
-<div class="stat">
-<div class="stat-value">99.9%</div>
-<div class="stat-label">充值成功（近30天）</div>
-</div>
-<div class="stat">
-<div class="stat-value">9:00–24:00</div>
-<div class="stat-label">人工在线</div>
-</div>
-</div>
-</header>
-<footer>
-      <div style="margin-bottom:10px;">面向国内用户的代充值通道，采用 iOS 官方渠道；自动化处理，三步完成。</div>
-      <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; border-bottom: 1px solid rgba(20, 184, 166, 0.4); padding-bottom: 2px; transition: all 0.2s;" onmouseover="this.style.color='#fff';this.style.borderColor='#14b8a6'" onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.borderColor='rgba(20, 184, 166, 0.4)'">
-        📚 GPT-4 新手教程 & 知识库
-      </a>
-    </footer>
-</main>
-<div aria-hidden="true" class="cs-drawer" id="csDrawer">
-<div class="cs-head">
-<strong>联系人工</strong>
-<button aria-label="关闭" id="csClose">✕</button>
-</div>
-<div class="cs-body">
-<p>微信：<b id="wx">yzz0753</b>
-<button class="copy" onclick="copyText('wx')">复制</button></p>
-<div class="qq-toggle">
-<button class="qq-toggle-btn" id="qqToggle">微信联系不上时，请联系QQ</button>
-<div class="qq-content" id="qqContent" style="display: none;">
-<p>QQ：<b id="qq">1852634132</b>
-<button class="copy" onclick="copyText('qq')">复制</button></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?707cb0fe41fad23ba42b49fef402f68b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<script>
-    function submitCode() {
-      const code = document.getElementById("code").value.trim();
-      if (!code) {
-        alert("请先填写激活码");
-        return;
-      }
-      // 跳转到激活码验证页面
-      window.location.href = `chongzhi.pro`;
-    }
-
-    document.getElementById('buyBtn')?.addEventListener('click', function () {
-      // 改为新窗口打开购买链接
-      window.open('https://fe.dtyuedan.cn/shop/jiage', '_blank', 'noopener');
-    });
-
-    const drawer = document.getElementById('csDrawer');
-    const closeBtn = document.getElementById('csClose');
-    const qqToggle = document.getElementById('qqToggle');
-    const qqContent = document.getElementById('qqContent');
-
-    function toggleDrawer(show){
-      if(show){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); }
-      else    { drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); }
-    }
-    closeBtn?.addEventListener('click', ()=> toggleDrawer(false));
-    
-    // QQ折叠展开功能
-    qqToggle?.addEventListener('click', ()=> {
-      const isHidden = qqContent.style.display === 'none';
-      qqContent.style.display = isHidden ? 'block' : 'none';
-      qqToggle.textContent = isHidden ? '收起QQ联系方式' : '微信联系不上时，请联系QQ';
-    });
-    
-    
-
-    function copyText(id){
-      const text = document.getElementById(id)?.textContent || '';
-      navigator.clipboard.writeText(text).then(()=> {
-        if(window.Toastify){ Toastify({ text: '已复制：' + text, duration: 1500 }).showToast(); }
-        else alert('已复制：' + text);
-      });
-    }
-    window.copyText = copyText;
-  </script>
-<a aria-label="¥129 立即购买" class="cta-sticky" href="#" role="button" id="mobileBuyBtn">¥129 立即购买</a>
-<script>
-    const openFlow = document.getElementById('openFlow');
-    const flowMask = document.getElementById('flowMask');
-    const closeFlow = document.getElementById('closeFlow');
-    openFlow?.addEventListener('click', (e)=>{ e.preventDefault(); flowMask?.classList.add('show'); flowMask?.setAttribute('aria-hidden','false'); });
-    closeFlow?.addEventListener('click', ()=>{ flowMask?.classList.remove('show'); flowMask?.setAttribute('aria-hidden','true'); });
-    flowMask?.addEventListener('click', (e)=>{ if(e.target===flowMask){ flowMask.classList.remove('show'); flowMask.setAttribute('aria-hidden','true'); }});
-    
-    
-    
-    // 充值流程弹窗中的QQ折叠展开功能
-    const flowQqToggle = document.getElementById('flowQqToggle');
-    const flowQqContent = document.getElementById('flowQqContent');
-    flowQqToggle?.addEventListener('click', ()=> {
-      const isHidden = flowQqContent.style.display === 'none';
-      flowQqContent.style.display = isHidden ? 'block' : 'none';
-      flowQqToggle.textContent = isHidden ? '收起QQ联系方式' : '微信联系不上时，请联系QQ';
-    });
-  </script>
-<div class="sticky-note" id="bottomNote">
-  <span class="note-text">📌 当前价 <strong>¥129</strong> ｜ 客服微信：<strong id="wxid">yzz0753</strong></span>
-  <button class="cta-mini" id="copyWeChat">复制微信</button>
-  <button class="cta-outline" id="openWhyFooter">为什么不是更便宜</button>
-  <a data-open="rechargeGuide" style="opacity:.75;text-decoration:underline;margin-left:.5rem;display:none;">
-    已购买·去激活
-  </a>
-</div>
-<script>
-// 复制微信 + 弹窗逻辑
-(function(){
-  function copy(text){
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      return navigator.clipboard.writeText(text);
-    } else {
-      alert('微信号：'+text+'\n请长按复制');
-      return Promise.resolve();
-    }
-  }
-  var wx = (document.getElementById('wxid') && document.getElementById('wxid').textContent) || 'yzz0753';
-  var b1 = document.getElementById('copyWeChat');
-  var b2 = document.getElementById('modalCopyWeChat');
-  if(b1){ b1.addEventListener('click', function(){ copy(wx).then(function(){ b1.textContent='已复制'; setTimeout(function(){ b1.textContent='复制微信'; },1600) }) }); }
-  if(b2){ b2.addEventListener('click', function(){ copy(wx).then(function(){ b2.textContent='已复制'; setTimeout(function(){ b2.textContent='复制微信：'+wx; },1600) }) }); }
-  var openBtn = document.getElementById('openPriceModal');
-  var modal = document.getElementById('priceModal');
-  var closeBtn = document.getElementById('closePriceModal');
-  if(openBtn && modal){
-    openBtn.addEventListener('click', function(){ modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); });
-  }
-  if(closeBtn && modal){
-    closeBtn.addEventListener('click', function(){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); });
-    modal.addEventListener('click', function(e){ if(e.target===modal){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); } });
-  }
-})();</script>
-
-<script>
-(function(){
-  function $(s){ return document.querySelector(s); }
-  function $all(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
-  var body = document.body;
-  var helpMask = $('#helpModal');
-  var helpCard = helpMask ? helpMask.querySelector('.help-card') : null;
-  var helpClose = $('#helpClose');
-  var tabs = $all('.help-tabs .tab');
-  var panels = $all('.help-panels .panel');
-  var lastFocus = null;
-
-  function setTab(name){
-    tabs.forEach(function(t){
-      var active = t.getAttribute('data-tab') === name;
-      t.classList.toggle('active', active);
-      t.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-    panels.forEach(function(p){
-      var show = p.getAttribute('data-panel') === name;
-      p.classList.toggle('active', show);
-      p.setAttribute('aria-hidden', show ? 'false' : 'true');
-    });
-    try { localStorage.setItem('help_tab', name); } catch(e){}
-  }
-
-  function openHelp(defaultTab){
-    lastFocus = document.activeElement;
-    var saved = null; try { saved = localStorage.getItem('help_tab'); } catch(e){}
-    var tab = defaultTab || saved || 'flow';
-    setTab(tab);
-    helpMask.classList.add('show');
-    helpMask.setAttribute('aria-hidden','false');
-    body.classList.add('modal-open');
-    (helpCard || helpMask).focus({preventScroll:true});
-  }
-
-  function closeHelp(){
-    helpMask.classList.remove('show');
-    helpMask.setAttribute('aria-hidden','true');
-    body.classList.remove('modal-open');
-    if(lastFocus && typeof lastFocus.focus === 'function'){ lastFocus.focus(); }
-  }
-
-  // Tab click
-  tabs.forEach(function(t){ t.addEventListener('click', function(){ setTab(t.getAttribute('data-tab')); }); });
-
-  // Triggers
-  var openTop = $('#openHelpModal');
-  var openBottom = $('#openHelpModalBottom');
-  if(openTop){ openTop.addEventListener('click', function(e){ e.preventDefault(); openHelp('flow'); }); }
-  if(openBottom){ openBottom.addEventListener('click', function(){ openHelp('flow'); }); }
-
-
-  // Close mechanics
-  if(helpClose) helpClose.addEventListener('click', closeHelp);
-  if(helpMask) helpMask.addEventListener('click', function(e){ if(e.target===helpMask) closeHelp(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && helpMask.classList.contains('show')) closeHelp(); });
-
-  // Copy WeChat buttons (bottom bar + help panel)
-  function isMobile(){ return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent); }
-  function copy(text){
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      return navigator.clipboard.writeText(text);
-    } else { alert('微信号：'+text+'\\n请手动复制'); return Promise.resolve(); }
-  }
-  var wechat = (document.getElementById('wxid') && document.getElementById('wxid').textContent) || (document.getElementById('helpWx') && document.getElementById('helpWx').textContent) || 'yzz0753';
-  var copyBtns = [ document.getElementById('copyWeChat'), document.getElementById('copyWeChatHelp') ].filter(Boolean);
-  copyBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var text = btn.textContent;
-      copy(wechat).then(function(){
-        btn.textContent = '已复制';
-        setTimeout(function(){ btn.textContent = text; }, 1600);
-        if(isMobile()){ setTimeout(function(){ try{ window.location.href='weixin://'; }catch(e){} }, 300); }
-      });
-    });
-  });
-
-  // Expose for debug
-  window.helpCenter = { open: openHelp, close: closeHelp, setTab: setTab };
-})();
-</script>
-<div class="modal-mask" id="whyModal" aria-hidden="true">
-  <div class="modal-card" role="dialog" aria-labelledby="whyTitle" tabindex="-1">
-    <button class="modal-close" id="whyClose" aria-label="关闭">×</button>
-    <h3 id="whyTitle" style="margin:.2rem 0 1rem">为什么不是更便宜</h3>
-
-    <nav class="help-tabs" role="tablist" aria-label="为什么不是更便宜">
-      <button role="tab" id="tabbtn-price" class="tab-btn active" data-tab="price" aria-selected="true" aria-controls="tab-price">价格构成</button>
-      <button role="tab" id="tabbtn-flow" class="tab-btn" data-tab="flow" aria-selected="false" aria-controls="tab-flow">充值流程</button>
-      <button role="tab" id="tabbtn-support" class="tab-btn" data-tab="support" aria-selected="false" aria-controls="tab-support">客服微信</button>
-    </nav>
-
-    <section id="tab-price" class="tab-panel active" role="tabpanel" aria-labelledby="tabbtn-price">
-      <p>官方订阅价 <strong>19.99 美元</strong>（或等值货币）。</p>
-      <ul>
-        <li>🍎 苹果通道与支付手续费</li>
-        <li>🔒 账号维护与风控成本（避免黑卡、降低封号风险）</li>
-        <li>👩‍💻 人工客服与售后保障</li>
-      </ul>
-      <p>综合以上成本，本站价格为 <strong>¥129</strong>。若整体成本上涨，价格可能相应调整。</p>
-      <a class="open-proof-link" id="openOfficialProof">查看官方通知 / 展开说明</a>
-      <div class="modal-footer">
-        <a href="#" class="cta-outline" id="modalBuyP">去购买</a>
-        <button class="cta-mini" id="modalCopyWxP">复制微信：<span class="wx">yzz0753</span></button>
+  <nav
+    style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); height: 60px; display: flex; align-items: center;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div
+        style="font-weight: 600; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 6px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+          </path>
+        </svg>
+        GPT Plus
       </div>
-    </section>
-
-    <section id="tab-flow" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-flow" hidden>
-      <ul class="flow-steps">
-        <li>① 下单获取卡密</li>
-        <li>② 获取账号充值信息（无需提供账号密码）</li>
-        <li>③ 约 5 分钟到账</li>
-      </ul>
-      <p class="hint">提示：若遇到账延迟，请先勿重复下单，联系人工处理。</p>
-      <div class="modal-footer">
-        <a href="#" class="cta-outline" id="modalBuyF">去购买</a>
-        <button class="cta-mini" id="modalCopyWxF">复制微信：<span class="wx">yzz0753</span></button>
+      <div class="desktop-menu" style="display: flex; gap: 24px; font-size: 0.95rem;">
+        <a href="#advantages"
+          style="color: var(--primary); text-decoration: none; font-weight: 500; position: relative; padding: 4px 0;">优势介绍</a>
+        <a href="#pricing-plans"
+          style="color: var(--primary); text-decoration: none; font-weight: 500; position: relative; padding: 4px 0;">购买套餐</a>
+        <a href="#contact"
+          style="color: var(--primary); text-decoration: none; font-weight: 500; position: relative; padding: 4px 0;">联系客服</a>
       </div>
-    </section>
-
-    <section id="tab-support" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-support" hidden>
-      <p>微信：<strong class="wx">yzz0753</strong></p>
-      <p class="hint">人工在线：9:00–24:00（其他时段尽量回复）</p>
-      <div class="modal-footer">
-        <a href="#" class="cta-outline" id="modalBuyS">去购买</a>
-        <button class="cta-mini" id="modalCopyWxS">复制微信：<span class="wx">yzz0753</span></button>
-      </div>
-    </section>
-  </div>
-</div>
-
-<div class="rg-mask" id="rechargeGuide" aria-hidden="true">
-  <div class="rg-card" role="dialog" aria-labelledby="rgTitle" tabindex="-1">
-    <button class="rg-close" id="rgClose" aria-label="关闭">×</button>
-    <h3 class="rg-title" id="rgTitle">充值网站指引</h3>
-
-    <div class="rg-body">
-      <p>已在发卡网完成购买并获得卡密后，请前往充值网站填写卡密，完成激活。</p>
-      <p class="rg-hint">通常约 <strong>5 分钟</strong>到账；如遇延迟，请先勿重复下单，加微信处理。</p>
-
-      <div class="rg-actions">
-        <button class="rg-btn rg-btn-primary" id="rgOpen">打开充值网站</button>
+      <div class="mobile-menu-button" style="display: none; cursor: pointer;" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="rs-mask" id="rechargeSystemModal" aria-hidden="true">
-  <div class="rs-card" role="dialog" aria-labelledby="rsTitle" tabindex="-1">
-    <button class="rs-close" id="rsClose" aria-label="关闭">×</button>
-    <h3 class="rs-title" id="rsTitle">选择充值网站激活</h3>
-
-    <div class="rs-body">
-      <p>说明：</p>
-      <ul style="margin: 8px 0; padding-left: 20px; line-height: 1.6;">
-        <li>购买了自动充值1卡密 → 进入网站1激活</li>
-        <li>购买了自动充值2卡密 → 进入网站2激活</li>
-      </ul>
-      
-      <div class="rs-options">
-        <div class="rs-option" data-url="https://www.ow800.com">
-          <div class="rs-option-title">自动充值1</div>
-          <div class="rs-option-desc">点击进入激活网站</div>
-          <div class="rs-option-url">www.ow800.com</div>
-        </div>
-        <div class="rs-option" data-url="https://czgpt.plus/">
-          <div class="rs-option-title">自动充值2</div>
-          <div class="rs-option-desc">点击进入激活网站</div>
-          <div class="rs-option-url">czgpt.plus</div>
-        </div>
-      </div>
-      
-      <div class="rs-actions">
-        <button class="rs-btn rs-btn-ghost" id="rsCancel">取消</button>
+    <div id="mobile-menu"
+      style="display: none; position: fixed; top: 60px; left: 0; right: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99;">
+      <div style="display: flex; flex-direction: column; padding: 16px;">
+        <a href="#advantages"
+          style="color: var(--primary); text-decoration: none; padding: 12px 16px; border-bottom: 1px solid var(--gray-100);"
+          onclick="closeMobileMenu()">优势介绍</a>
+        <a href="#pricing-plans"
+          style="color: var(--primary); text-decoration: none; padding: 12px 16px; border-bottom: 1px solid var(--gray-100);"
+          onclick="closeMobileMenu()">购买套餐</a>
+        <a href="#contact" style="color: var(--primary); text-decoration: none; padding: 12px 16px;"
+          onclick="closeMobileMenu()">联系客服</a>
       </div>
     </div>
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1>🚀 GPT Plus 会员代充平台</h1>
+      <p class="subtitle">165官方通道 · 不封号 · 微信直充</p>
+    </header>
+
+    <section id="advantages">
+      <h2>欢迎公司对接，我们的优势</h2>
+      <div class="grid">
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m-7 4a9 9 0 1118 0 9 9 0 01-18 0z"></path>
+            </svg>
+          </div>
+          <h3>官方充值通道</h3>
+          <p>走 Apple 结算，更安全不封号</p>
+        </a>
+
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+          </div>
+          <h3>微信直充更便捷</h3>
+          <p>无卡也能付，国内用户专属</p>
+        </a>
+
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3>5分钟极速到账</h3>
+          <p>自动处理，成功率 100%</p>
+        </a>
+
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+              </path>
+            </svg>
+          </div>
+          <h3>不记录账号密码</h3>
+          <p>保护账号隐私安全</p>
+        </a>
+
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+              </path>
+            </svg>
+          </div>
+          <h3>新手也能轻松充值</h3>
+          <p>简单 3 步开通 GPT Plus</p>
+        </a>
+
+        <a href="https://gpt.aicz.cc" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+              </path>
+            </svg>
+          </div>
+          <h3>视频操作指引</h3>
+          <p>边看边充不踩坑</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧩 极速充值 · 只需三步</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <span>下单卡密</span>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <span>提交账号</span>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <span>等待到账</span>
+        </div>
+      </div>
+      <p class="note">👉 操作不懂？点击查看 <a href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/514196921671.mp4"
+          target="_blank" rel="noopener noreferrer" style="color: var(--primary);">充值教程</a> ｜ 有问题？<a href="#contact"
+          style="color: var(--primary);">联系客服</a></p>
+    </section>
+
+    <section style="margin: var(--space-xl) 0;" id="pricing-plans">
+      <div class="pricing-section"
+        style="border: 2px solid var(--primary-light); border-radius: var(--radius-lg); padding: var(--space-md); margin: var(--space-md) auto; max-width: 500px;">
+        <a href="#contact" class="btn btn-primary"
+          style="display: flex; align-items: center; justify-content: center; height: 42px;background: linear-gradient(135deg, #79c78e 0%, var(--primary-dark) 100%);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="margin-right: 6px;">
+            <path
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+            </path>
+          </svg>
+          GPT PRO 联系客服
+        </a>
+        <h2>GPT Plus 月付套餐</h2>
+
+        <div style="text-align: center; margin: var(--space-md) 0;">
+          <div class="btn-group"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 450px; margin: 0 auto;">
+            <a href="#contact" class="btn btn-primary"
+              style="display: inline-flex; align-items: center; justify-content: center; height: 42px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="margin-right: 6px;">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+              购买卡密
+            </a>
+            <a href="https://gpt.aicz.cc" class="btn btn-secondary"
+              style="display: inline-flex; align-items: center; justify-content: center; height: 42px;" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="margin-right: 6px;">
+                <path
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                </path>
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              跳转代充平台
+            </a>
+          </div>
+        </div>
+
+        <div class="price-tag" style="margin: var(--space-md) auto; max-width: 320px;">
+          <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <div
+              style="background-color: #ff6b00; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; margin-right: 15px;">
+              <span style="margin-right: 4px;">🔥</span>
+              <span>限时特惠</span>
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: #4f46e5;">¥165</div>
+          </div>
+          <div style="font-size: 0.85rem; color: #71717a; text-align: center;">
+            对比虚拟卡+ 封号风险，你选哪个？
+          </div>
+        </div>
+        <p class="note">✅ 官方渠道充值，仅 ¥165<br>避免美金虚拟卡、封号等风险，微信秒到！</p>
+
+        <div class="account-section">
+          <p class="hint">
+            还没有 GPT 账号？点击下方购买微软/mail注册的普通账号
+          </p>
+          <a href="#contact" class="btn btn-secondary"
+            style="max-width: 200px; display: inline-flex; align-items: center; justify-content: center; text-align: center; margin: 0 auto; height: 42px;">
+            👥 购买 GPT 普通账号
+          </a>
+          <p class="note">
+            * 该账号为微软/mail注册的普通账号，不含 Plus 会员，如需使用需另行充值
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <section style="margin: var(--space-xl) 0;">
+        <h2 class="comparison-title"
+          style="font-size: 1.8rem; font-weight: 700; color: var(--gray-600); text-align: center; margin-bottom: var(--space-lg);">
+          💡 为什么不是最低价，却最值得？
+        </h2>
+
+        <div class="comparison-grid"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); max-width: 800px; margin: 0 auto;">
+          <div class="comparison-card"
+            style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: var(--radius-lg); padding: var(--space-md); box-shadow: var(--shadow-md); border: 1px solid rgba(99, 102, 241, 0.08);">
+            <div style="text-align: center; margin-bottom: var(--space-md);">
+              <div
+                style="width: 48px; height: 48px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z">
+                  </path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--gray-700); margin: 0;">市场低价渠道</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #ef4444; font-size: 1.1rem;">❌</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">渠道稳定性差，常被封号</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #ef4444; font-size: 1.1rem;">❌</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">需虚拟卡或美元支付</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #ef4444; font-size: 1.1rem;">❌</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">常无售后保障</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #ef4444; font-size: 1.1rem;">❌</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">延迟甚至失败到账</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-card"
+            style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: var(--radius-lg); padding: var(--space-md); box-shadow: var(--shadow-md); border: 1px solid rgba(99, 102, 241, 0.16); position: relative;">
+            <div
+              style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">
+              推荐</div>
+            <div style="text-align: center; margin-bottom: var(--space-md);">
+              <div
+                style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--gray-700); margin: 0;">我们的 ¥165 iOS 官方通道</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #10b981; font-size: 1.1rem;">✅</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">官方通道安全稳定</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #10b981; font-size: 1.1rem;">✅</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">支持微信支付</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #10b981; font-size: 1.1rem;">✅</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">可人工协助处理</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: var(--space-xs);">
+                <span style="color: #10b981; font-size: 1.1rem;">✅</span>
+                <span style="color: var(--gray-600); font-size: 0.95rem;">5分钟自动到账</span>
+              </div>
+              <div style="margin-top: 8px; color: var(--gray-400); font-size: 0.92em;">
+                ✔ 使用 iOS 官方渠道，非虚拟卡或野卡渠道
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align: center; color: var(--gray-500); font-size: 0.9rem; margin-top: var(--space-md);">
+          💡 选择我们，享受官方品质的稳定服务
+        </p>
+      </section>
+    </section>
+
+    <section style="margin: var(--space-xl) 0;" id="contact">
+      <h2
+        style="text-align: center; font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-md); color: var(--gray-700);">
+        联系客服购买</h2>
+      <p
+        style="text-align: center; font-size: 0.875rem; color: var(--gray-500); margin-bottom: var(--space-md); max-width: 500px; margin-left: auto; margin-right: auto;">
+        扫码添加官方客服微信：<span style="font-weight: 600; color: var(--primary);">RuoYan0814</span><br>
+        工作时间：9:00 - 22:00，添加请备注：<span style="font-weight: 600;">GPT Plus</span>
+      </p>
+
+      <div style="display: flex; justify-content: center;">
+        <div style="text-align: center;">
+          <div
+            style="width: 180px; height: 180px; background: white; border-radius: var(--radius-lg); padding: 12px; box-shadow: var(--shadow-md); margin: 0 auto; border: 1px solid rgba(99, 102, 241, 0.1);">
+            <img src="二维码.jpg" alt="客服微信二维码"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--radius-lg) - 6px);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <p>本服务专为国内用户提供便捷充值通道，采用 iOS 官方渠道，安全合规</p>
+      <p>交易全程加密，保障账号与信息安全</p>
+    </div>
   </div>
-</div>
 
-<div class="proof-mask" id="officialProof" aria-hidden="true">
-  <div class="proof-card" role="dialog" aria-labelledby="proofTitle" tabindex="-1">
-    <button class="proof-close" id="proofClose" aria-label="关闭">×</button>
-    <h3 class="proof-title" id="proofTitle">官方价格通知 & 合规说明</h3>
-
-    <section class="proof-sec" id="proof-official">
-      <h4>官方价格通知（摘要）</h4>
-      <ul class="proof-list">
-        <li>官方订阅价 <strong>19.99 美元/月</strong>（自 <strong>2025-09-16</strong> 起分批执行）。</li>
-        <li>本站走 <strong>苹果官方通道</strong>，价格含 <strong>通道费 / 风控 / 售后</strong>。</li>
-      </ul>
-      <p>→ <strong>定价 ¥129</strong>（如整体成本上调，将同步调整）。</p>
-
-      <div class="proof-actions">
-        <button class="proof-btn proof-btn-ghost" id="toggleProofImg">查看官方通知截图</button>
-      </div>
-
-      <div class="proof-imgwrap" id="proofImgWrap">
-        <button class="img-close" id="imgClose" aria-label="关闭图片">×</button>
-        <img class="proof-img" id="proofImg" src="gpt 图片.png" alt="官方价格通知截图">
-      </div>
-    </section>
-
-    <section class="proof-sec" id="proof-forex">
-      <h4>关于"低汇率国家"的说明</h4>
-      <ul class="proof-list">
-        <li>低价多为 <strong>跨区礼品卡/黑卡</strong>，<strong>不稳定、风险高</strong>。</li>
-        <li>易回滚/拒付，易触发风控，售后不可控。</li>
-      </ul>
-      <p class="proof-hint">目前没有 <strong>长期可复用</strong> 的低汇率方案；我们仅提供 <strong>官方通道</strong>，含 <strong>售后与风险处置</strong>。</p>
-    </section>
-
-    <section class="proof-sec">
-      <div class="proof-actions">
-        <button class="proof-btn proof-btn-ghost" id="proofCopyWx">复制微信：<span class="wx">yzz0753</span></button>
-        <a class="proof-btn proof-btn-primary" id="proofGoBuy" href="#" rel="noopener">去购买</a>
-      </div>
-    </section>
+  <div class="wechat-float" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <path
+        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+      </path>
+    </svg>
   </div>
-</div>
 
-<script>
-(function(){
-  function $(s){ return document.querySelector(s); }
-  function $all(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
-  function lockScroll(on){ document.body.classList[on?'add':'remove']('modal-open'); }
-  function isMobile(){ return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent); }
-  function copyText(t){
-    if(navigator.clipboard && navigator.clipboard.writeText){ return navigator.clipboard.writeText(t); }
-    alert('微信号：'+t+'\\n请手动复制'); return Promise.resolve();
-  }
+  <div class="modal-backdrop" id="qrModalBackdrop" onclick="toggleQRModal()"></div>
+  <div class="modal-container" id="qrModalContainer">
+    <button class="modal-close" onclick="toggleQRModal()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div class="qr-container">
+      <div class="qr-title">扫码添加客服微信</div>
+      <div class="qr-subtitle" style="color: var(--primary); font-weight: 500;">微信：RuoYan0814</div>
+      <img src="二维码.jpg" alt="客服微信二维码">
+      <p class="note">工作时间：9:00 - 22:00<br>添加时请备注：GPT Plus</p>
+    </div>
+  </div>
 
-  var modal = $('#whyModal');
-  var card  = modal ? modal.querySelector('.modal-card') : null;
-  var closeBtn = $('#whyClose');
-  var tabBtns = $all('.help-tabs .tab-btn');
-  var panels = { price: $('#tab-price'), flow: $('#tab-flow'), support: $('#tab-support') };
-  var wxEl = $('#wxid'); var wx = wxEl ? (wxEl.textContent || 'yzz0753') : 'yzz0753';
-  var lastFocus = null;
-  var FOCUSABLE = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+  <script>
+    // 公告栏功能
+    function closeAnnouncement() {
+      const announcement = document.getElementById('announcement');
+      announcement.style.display = 'none';
+      localStorage.setItem('announcementClosed', 'true');
+    }
 
-  function setTab(tab){
-    if(!panels[tab]) tab = 'price';
-    tabBtns.forEach(function(b){ var on=b.dataset.tab===tab; b.classList.toggle('active', on); b.setAttribute('aria-selected', on?'true':'false'); });
-    Object.keys(panels).forEach(function(k){
-      if(k===tab){ panels[k].classList.add('active'); panels[k].removeAttribute('hidden'); }
-      else{ panels[k].classList.remove('active'); panels[k].setAttribute('hidden',''); }
-    });
-    localStorage.setItem('why_tab', tab);
-  }
-  function openWhy(defaultTab){
-    var tab = defaultTab || localStorage.getItem('why_tab') || 'price';
-    setTab(tab);
-    lastFocus = document.activeElement;
-    modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
-    lockScroll(true);
-    (card||modal).focus({preventScroll:true});
-  }
-  function closeWhy(){
-    modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');
-    lockScroll(false);
-    if(lastFocus && typeof lastFocus.focus==='function'){ lastFocus.focus(); }
-  }
-  function trapFocus(e){
-    if(!modal.classList.contains('show') || e.key!=='Tab') return;
-    var f = modal.querySelectorAll(FOCUSABLE); if(!f.length) return;
-    var first=f[0], last=f[f.length-1];
-    if(e.shiftKey){ if(document.activeElement===first){ last.focus(); e.preventDefault(); } }
-    else{ if(document.activeElement===last){ first.focus(); e.preventDefault(); } }
-  }
-
-  // 页签点击 & 左右方向键切换
-  tabBtns.forEach(function(btn, idx){
-    btn.addEventListener('click', function(){ setTab(btn.dataset.tab); });
-    btn.addEventListener('keydown', function(e){
-      if(e.key==='ArrowRight' || e.key==='ArrowLeft'){
-        var i = idx + (e.key==='ArrowRight'?1:-1);
-        if(i<0) i=tabBtns.length-1; if(i>=tabBtns.length) i=0;
-        var next=tabBtns[i]; next.focus(); setTab(next.dataset.tab); e.preventDefault();
+    // 页面加载时检查公告栏状态
+    window.addEventListener('load', function () {
+      const announcementClosed = localStorage.getItem('announcementClosed');
+      if (announcementClosed === 'true') {
+        document.getElementById('announcement').style.display = 'none';
       }
     });
-  });
 
-  // 入口：顶部小链接 → 默认"流程"；底部按钮 → 默认"价格"
-  var openTop = $('#openWhyTop');
-  var openBottom = $('#openWhyFooter');
-  if(openTop)    openTop.addEventListener('click', function(e){ e.preventDefault(); openWhy('price'); });
-  if(openBottom) openBottom.addEventListener('click', function(e){ e.preventDefault(); openWhy('price'); });
-
-  // 将旧入口映射到新弹窗（兜底）
-  var map = { openPriceModal:'price', openFlowModal:'flow', openSupportModal:'support', openPolicy:'price', openWhy:'price', openFlow:'flow' };
-  Object.keys(map).forEach(function(id){ var el=document.getElementById(id); if(el){ el.addEventListener('click', function(e){ e.preventDefault(); openWhy(map[id]); }); } });
-
-  // 关闭 & 可访问性
-  if(closeBtn) closeBtn.addEventListener('click', closeWhy);
-  if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeWhy(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeWhy(); trapFocus(e); });
-
-  // 复制微信（底部 + 弹窗）
-  function bindCopy(id){
-    var btn=document.getElementById(id); if(!btn) return;
-    btn.addEventListener('click', function(){
-      copyText(wx).then(function(){
-        var old=btn.textContent; btn.textContent='已复制，去微信添加';
-        setTimeout(function(){ btn.textContent=old; },1600);
-        if(isMobile()){ setTimeout(function(){ try{ location.href='weixin://'; }catch(e){} }, 300); }
-      });
-    });
-  }
-  bindCopy('copyWeChat'); bindCopy('modalCopyWxP'); bindCopy('modalCopyWxF'); bindCopy('modalCopyWxS');
-
-  // 为三个页签的"去购买卡密"按钮添加跳转逻辑
-  var modalBuyP = document.getElementById('modalBuyP'); // 价格构成页签
-  var modalBuyF = document.getElementById('modalBuyF'); // 充值流程页签
-  var modalBuyS = document.getElementById('modalBuyS'); // 客服微信页签
-  
-  var buyUrl = 'https://yk.dtyuedan.cn//details/9AC78762'; // 与立即购买按钮相同的链接（保留作备用）
-  
-  if(modalBuyP){
-    modalBuyP.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open('https://fe.dtyuedan.cn/shop/jiage', '_blank', 'noopener');
-    });
-  }
-  
-  if(modalBuyF){
-    modalBuyF.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open('https://fe.dtyuedan.cn/shop/jiage', '_blank', 'noopener');
-    });
-  }
-  
-  if(modalBuyS){
-    modalBuyS.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open('https://fe.dtyuedan.cn/shop/jiage', '_blank', 'noopener');
-    });
-  }
-
-
-  // 导出以便调试
-  window.openWhy = openWhy;
-})();
-</script>
-
-<script>
-(function(){
-  // 常量：充值网址（可按需改）
-  var RG_URL = (["https://","chongzhi",".","pro"].join(""));
-
-  // 工具
-  function $(s){ return document.querySelector(s); }
-  function copyText(t){
-    if(navigator.clipboard && navigator.clipboard.writeText){ return navigator.clipboard.writeText(t); }
-    var ta = document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
-    try{ document.execCommand('copy'); }catch(e){}
-    document.body.removeChild(ta); return Promise.resolve();
-  }
-  function lockScroll(on){ document.body.classList[on?'add':'remove']('modal-open'); } // 不改变你站点样式，仅控制滚动
-
-  // 元素
-  var modal = $('#rechargeGuide');
-  var card  = modal ? modal.querySelector('.rg-card') : null;
-  var closeBtn = $('#rgClose');
-  var btnOpen  = $('#rgOpen');
-  var lastFocus = null;
-
-  // 打开/关闭
-  function openRechargeGuide(){
-    lastFocus = document.activeElement;
-    modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
-    lockScroll(true);
-    (card||modal).focus({preventScroll:true});
-  }
-  function closeRechargeGuide(){
-    modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');
-    lockScroll(false);
-    if(lastFocus && typeof lastFocus.focus==='function'){ try{ lastFocus.focus(); }catch(e){} }
-  }
-
-  // 事件
-  if(closeBtn) closeBtn.addEventListener('click', closeRechargeGuide);
-  if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeRechargeGuide(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeRechargeGuide(); });
-
-  if(btnOpen){
-    btnOpen.addEventListener('click', function(){
-      window.open(RG_URL, '_blank', 'noopener');
-    });
-  }
-
-  // 暴露全局函数，供你在现有按钮/链接上直接调用
-  window.openRechargeGuide = openRechargeGuide;
-
-  // （可选兜底）如果页面上本来就有某个元素想触发，可给它加 data-open="rechargeGuide"
-  var autoTriggers = document.querySelectorAll('[data-open="rechargeGuide"]');
-  autoTriggers.forEach(function(el){ el.addEventListener('click', function(e){ e.preventDefault(); openRechargeGuide(); }); });
-})();
-</script>
-
-<script>
-(function(){
-  function $(s){ return document.querySelector(s); }
-  function copyText(t){
-    if(navigator.clipboard && navigator.clipboard.writeText){ return navigator.clipboard.writeText(t); }
-    var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
-    try{ document.execCommand('copy'); }catch(e){}
-    document.body.removeChild(ta); return Promise.resolve();
-  }
-  function lockScroll(on){ document.body.classList[on?'add':'remove']('modal-open'); }
-
-  // 入口：价格构成页签里的 "查看官方通知 / 展开说明"
-  var openBtn = $('#openOfficialProof');
-  var modal   = $('#officialProof');
-  var card    = modal ? modal.querySelector('.proof-card') : null;
-  var closeBtn= $('#proofClose');
-  var imgWrap = $('#proofImgWrap');
-  var img     = $('#proofImg');
-  var toggleImg = $('#toggleProofImg');
-  var copyWx  = $('#proofCopyWx');
-  var goBuy   = $('#proofGoBuy');
-  var lastFocus = null;
-
-  // 请在此设置你的购买链接（使用与立即购买相同的链接）：
-  var BUY_URL = 'https://fe.dtyuedan.cn/shop/jiage';
-  if(goBuy){ 
-    goBuy.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open(BUY_URL, '_blank', 'noopener');
-    });
-  }
-
-  // 若页面已有微信号节点 #wxid，则读取；否则用按钮里的文本
-  var wxNode = document.getElementById('wxid');
-  var WX = (wxNode && (wxNode.textContent||'').trim()) || (copyWx ? (copyWx.textContent.match(/[\w-]+$/)||['yzz0753'])[0] : 'yzz0753');
-
-  function openProof(){
-    lastFocus = document.activeElement;
-    modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
-    lockScroll(true); (card||modal).focus({preventScroll:true});
-  }
-  function closeProof(){
-    modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');
-    lockScroll(false);
-    if(lastFocus && typeof lastFocus.focus==='function'){ try{ lastFocus.focus(); }catch(e){} }
-  }
-
-  if(openBtn){ openBtn.addEventListener('click', function(e){ e.preventDefault(); openProof(); }); }
-  if(closeBtn){ closeBtn.addEventListener('click', closeProof); }
-  if(modal){ modal.addEventListener('click', function(e){ if(e.target===modal) closeProof(); }); }
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeProof(); });
-
-  // 查看/收起截图
-  if(toggleImg){
-    toggleImg.addEventListener('click', function(){
-      if(imgWrap){ imgWrap.classList.toggle('show'); }
-    });
-  }
-  
-  // 点击截图外部区域关闭悬浮窗
-  if(imgWrap){
-    imgWrap.addEventListener('click', function(e){
-      if(e.target === imgWrap){
-        imgWrap.classList.remove('show');
+    // 绑定关闭按钮事件
+    document.addEventListener('DOMContentLoaded', function () {
+      const closeBtn = document.getElementById('closeAnnouncement');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeAnnouncement);
       }
     });
-  }
-  
-  // 图片关闭按钮（移动端显示）
-  var imgCloseBtn = document.getElementById('imgClose');
-  if(imgCloseBtn){
-    imgCloseBtn.addEventListener('click', function(e){
-      e.stopPropagation(); // 阻止事件冒泡
-      imgWrap.classList.remove('show');
-    });
-  }
 
-  // 复制微信
-  if(copyWx){
-    copyWx.addEventListener('click', function(){
-      copyText(WX).then(function(){
-        var old = copyWx.textContent;
-        copyWx.textContent = '已复制，去微信添加';
-        setTimeout(function(){ copyWx.textContent = old; }, 1600);
-        // 移动端尝试拉起微信
-        try{ if(/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)){ setTimeout(function(){ location.href='weixin://'; }, 300); } }catch(_){}
-      });
-    });
-  }
+    // 优化后的弹窗开关逻辑，避免状态冲突
+    function toggleQRModal() {
+      const backdrop = document.getElementById('qrModalBackdrop');
+      const container = document.getElementById('qrModalContainer');
 
-  // 导出函数（如需在别处触发）
-  window.openOfficialProof = openProof;
-})();
-</script>
-
-<script>
-(function(){
-  function $(s){ return document.querySelector(s); }
-  function copyText(t){
-    if(navigator.clipboard && navigator.clipboard.writeText){ return navigator.clipboard.writeText(t); }
-    var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
-    try{ document.execCommand('copy'); }catch(e){}
-    document.body.removeChild(ta); return Promise.resolve();
-  }
-  function lockScroll(on){ document.body.classList[on?'add':'remove']('modal-open'); }
-
-  var modal = $('#outOfStockModal');
-  var card = modal ? modal.querySelector('.modal-card') : null;
-  var closeBtn = $('#outOfStockClose');
-  var copyBtn = $('#copyWeChatOutOfStock');
-  var closeBtn2 = $('#closeOutOfStockModal');
-  var mobileBuyBtn = $('#mobileBuyBtn');
-  var lastFocus = null;
-  var WX = 'yzz0753';
-
-  function openOutOfStockModal(){
-    lastFocus = document.activeElement;
-    modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
-    lockScroll(true);
-    (card||modal).focus({preventScroll:true});
-  }
-  
-  function closeOutOfStockModal(){
-    modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');
-    lockScroll(false);
-    if(lastFocus && typeof lastFocus.focus==='function'){ try{ lastFocus.focus(); }catch(e){} }
-  }
-
-  // 关闭按钮事件
-  if(closeBtn) closeBtn.addEventListener('click', closeOutOfStockModal);
-  if(closeBtn2) closeBtn2.addEventListener('click', closeOutOfStockModal);
-  if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeOutOfStockModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeOutOfStockModal(); });
-
-  // 复制微信按钮
-  if(copyBtn){
-    copyBtn.addEventListener('click', function(){
-      copyText(WX).then(function(){
-        var old = copyBtn.textContent;
-        copyBtn.textContent = '已复制';
-        setTimeout(function(){ copyBtn.textContent = old; }, 1600);
-        // 移动端尝试拉起微信
-        try{ if(/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)){ setTimeout(function(){ location.href='weixin://'; }, 300); } }catch(_){}
-      });
-    });
-  }
-
-  // 移动端购买按钮事件
-  if(mobileBuyBtn){
-    mobileBuyBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open('https://fe.dtyuedan.cn/shop/jiage', '_blank', 'noopener');
-    });
-  }
-
-  // 导出函数
-  window.openOutOfStockModal = openOutOfStockModal;
-})();
-</script>
-
-<script>
-(function(){
-  function $(s){ return document.querySelector(s); }
-  function $all(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
-  function lockScroll(on){ document.body.classList[on?'add':'remove']('modal-open'); }
-
-  var modal = $('#rechargeSystemModal');
-  var card = modal ? modal.querySelector('.rs-card') : null;
-  var closeBtn = $('#rsClose');
-  var cancelBtn = $('#rsCancel');
-  var rechargeBtn = $('#rechargeBtn');
-  var options = $all('.rs-option');
-  var lastFocus = null;
-
-  function openRechargeSystemModal(){
-    lastFocus = document.activeElement;
-    modal.classList.add('show'); 
-    modal.setAttribute('aria-hidden','false');
-    lockScroll(true);
-    (card||modal).focus({preventScroll:true});
-  }
-  
-  function closeRechargeSystemModal(){
-    modal.classList.remove('show'); 
-    modal.setAttribute('aria-hidden','true');
-    lockScroll(false);
-    if(lastFocus && typeof lastFocus.focus==='function'){ try{ lastFocus.focus(); }catch(e){} }
-  }
-
-  // 进入充值系统：直接打开 9977ai.vip
-  if(rechargeBtn){
-    rechargeBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      window.open('https://9977ai.vip', '_blank', 'noopener');
-    });
-  }
-
-  // 关闭弹窗
-  if(closeBtn) closeBtn.addEventListener('click', closeRechargeSystemModal);
-  if(cancelBtn) cancelBtn.addEventListener('click', closeRechargeSystemModal);
-  if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeRechargeSystemModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeRechargeSystemModal(); });
-
-  // 点击选项跳转到对应网站
-  options.forEach(function(option){
-    option.addEventListener('click', function(){
-      var url = option.getAttribute('data-url');
-      if(url){
-        window.open(url, '_blank', 'noopener');
-        closeRechargeSystemModal();
+      if (backdrop.classList.contains('active')) {
+        container.classList.remove('active');
+        backdrop.classList.remove('active');
+        setTimeout(() => {
+          backdrop.style.display = 'none';
+          container.style.display = 'none';
+        }, 300);
+      } else {
+        backdrop.style.display = 'block';
+        container.style.display = 'block';
+        // 强制重绘，确保过渡动画生效
+        container.offsetHeight; 
+        backdrop.classList.add('active');
+        container.classList.add('active');
       }
-    });
-  });
+    }
 
-  // 导出函数
-  window.openRechargeSystemModal = openRechargeSystemModal;
-})();
-</script></body>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.style.display === 'block') {
+        mobileMenu.style.display = 'none';
+      } else {
+        mobileMenu.style.display = 'block';
+      }
+    }
+
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').style.display = 'none';
+    }
+
+    // 添加响应式菜单切换
+    function checkScreenSize() {
+      const desktopMenu = document.querySelector('.desktop-menu');
+      const mobileButton = document.querySelector('.mobile-menu-button');
+
+      if (window.innerWidth <= 768) {
+        desktopMenu.style.display = 'none';
+        mobileButton.style.display = 'block';
+      } else {
+        desktopMenu.style.display = 'flex';
+        mobileButton.style.display = 'none';
+        document.getElementById('mobile-menu').style.display = 'none';
+      }
+    }
+
+    // 初始化检查
+    window.addEventListener('load', checkScreenSize);
+    window.addEventListener('resize', checkScreenSize);
+
+    // 平滑滚动到锚点
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
